@@ -10,34 +10,37 @@
         <img src="img/cities-skylines.png" class="sky">
     </div>
     
-    <div> <!-- PANEL-->
+    <div> 
+        <!-- PANEL-->
         <img src="img/panel.png" id="panel">
+        
+        <!--  Location & dateTime info  -->
         <div>
             <div id="dayTime" class="font"></div>
             <div id="city" class="font"></div>
             <img src="img/location_rectangle.png" id="location_rectangle">
             <img src="img/location_icon.png" id="location_icon">
         </div>
-        <!--    -->
-        <div id="firstRow" class="row">
+
+        <!--  First Row  -->
+        <div>
             <div id="weatherIcon"> </div>
-            <div id="temperatura"></div>
-            <div id="celsius"> °C</div>
+            <div id="temperatura"></div> <div id="celsius"> °C</div>
+            <div id="max" class="font"></div> 
+            <div id="min" class="font"></div>
         </div>
-        <div id="fecha"></div>
-
-        <div id="humidity" class="fontDateTime">
+        <!--  Second Row  -->
+        <div>
+            <div id="humidity" class="fontDateTime">Humidity
             <img src="img/humidity_icon.png"> 
+            </div>
+            <div id="pressure" class="purple">
+                <img src="img/pressure_icon.png"> 
+            </div>
         </div>
-        <div id="pressure" class="purple">
-            <img src="img/pressure_icon.png"> 
-        </div>
-
     </div>
 
 </body onload="writeCurrentWeather()">
 <script src="js/app.js"></script>   
 <link rel="stylesheet" href="css/style.css">  
 </html>
-
-<!-- 23 || 24 -->
