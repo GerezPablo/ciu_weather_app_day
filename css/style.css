@@ -33,9 +33,9 @@
     width: 20vh;
     height: 30vh;
     right: 5%;
-    top: 41%;
+    top: 40%;
 
-    color: #999999;
+    color: #0DA0EA;
 }
 
 #location_icon {
@@ -46,13 +46,38 @@
     top: 40%;    
 }
 
-#fecha {
-    height: 100px;
-    width: 150px;
+#weatherIcon  {
     position: absolute;
-    align-self: center;
-    top: 66%;
-    background-color: yellow;
+    left: 10%;
+}
+
+#temperatura {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-size: 10vh;
+    line-height: 77px;
+    letter-spacing: -0.05em;
+ 
+
+    color: #000000;
+}
+#celsius {
+    position: absolute;
+    left: 65%;
+    top: 48%;
+
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-size: 5vh;
+    line-height: 77px;
+    letter-spacing: -0.05em;
+ 
+
+    color: grey;
 }
 
 
