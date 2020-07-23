@@ -1,42 +1,55 @@
 var lat = -34.5708;
 var lon = -58.6243;
 var apiKey = "834075ea43292b8f4f1b3021724ad698";
-var part = "daily";
+var lang = "sp, es"
+var part = "";
 
-const request = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part},hourly&appid=${apiKey}`;
+const request = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&lang=${lang}&exclude=${part},hourly&appid=${apiKey}`;
 
-function getWeather() {    
-    return fetch(request)
-    .then(response => response.json() )
+function getCurrentWeather() {    
+    return fetch(request).then(response => response.json()) //Le pega a la API.
+    .then(weatherInfo => {
+        return weatherInfo.daily[0] //Devuelve dia actual.
+    })
     .catch(err => { err = new Error(), console.log(err) })
-    .then(weatherInfo => { return weatherInfo.current })
 }
-
-
-function writeWeather() {
-    getWeather()
-    .then(current => {
-        document.getElementById("humidity").innerHTML = current.humidity
-        document.getElementById("pressure").innerHTML = current.pressure
-        document.getElementById("wind_speed").innerHTML = current.wind_speed 
-        document.getElementById("sunrise").innerHTML = current.sunrise
-        document.getElementById("sunset").innerHTML = current.sunset
-        document.getElementById("dt").innerHTML = current.dt      
+function getCity() {
+    fetch(request).then(response => response.json())
+        .then(weatherInfo => { 
+        const tz = weatherInfo.timezone.split("/");
+        console.log(tz);
+        document.getElementById("city").innerHTML = tz[tz.length-1];
     })
 }
 
+function writeCurrentWeather() {
+    getCurrentWeather()
+    .then( day => {
+        //DayTime
+        const dayTime = new Date(day.dt * 1000);
+        document.getElementById("dayTime").innerHTML =  dayTime.toString().substr(0,21);;
+        
+        //city
+        getCity()
+        
+        //Sunrirse
+        const currentSunrise = new Date(day.sunrise * 1000);
+        console.log( `${currentSunrise.getHours()}:${currentSunrise.getMinutes()}` );
 
-/*
-{"lat":-34.57,"lon":-58.62,"timezone":"America/Argentina/Buenos_Aires","timezone_offset":-10800,
-"current":{"dt":1595466585,"sunrise":1595415296,"sunset":1595451997,"temp":287.65,"feels_like":286.56,"pressure":1011,
-"humidity":87,"dew_point":285.51,"uvi":2.84,"clouds":90,"visibility":5000,"wind_speed":2.6,"wind_deg":230,
-"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}]}}
-*/
+        //Sunset
+        document.getElementById("fecha").innerHTML = `${currentSunrise.getHours()}:${currentSunrise.getMinutes()}`
 
+        const currentSunset = new Date(day.sunset * 1000);
+        console.log( `${currentSunset.getHours()}:${currentSunset.getMinutes()}` );
+        
+        //Temperatura la API te los tira en Kelvin hay que pasarlos a Celsius:
+        console.log(`
+        Max: ${parseInt(day.temp.max -273.15)}\n
+        Min: ${parseInt(day.temp.min -273.15)}
+        `)
+    })
+}
 
+//http://openweathermap.org/img/wn/10d@2x.png HABEMUS ICONS
 
-
-
-
-
-
+writeCurrentWeather() 

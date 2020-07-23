@@ -1,0 +1,68 @@
+.sky { 
+    max-width: 100%;
+    margin: 0;
+}
+
+#panel {
+    position: absolute;
+    width: 100%;
+    min-width: 100%;
+    top: 30%;
+}
+
+#location_rectangle {
+    position: absolute;
+    width: 25vh;
+    height: 6vh;
+    right: 0;
+    top: 38%;
+}
+
+#dayTime {
+    position: absolute;
+    width: 20vh;
+    height: 30vh;
+    left: 41px;
+    top: 39%;
+
+    color: #999999;
+}
+
+#city {
+    position: absolute;
+    width: 20vh;
+    height: 30vh;
+    right: 5%;
+    top: 41%;
+
+    color: #999999;
+}
+
+#location_icon {
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    right: 4%;
+    top: 40%;    
+}
+
+#fecha {
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    align-self: center;
+    top: 66%;
+    background-color: yellow;
+}
+
+
+
+/*Fuentes*/
+.font {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 230%;
+    line-height: 50px;
+    text-align: center;
+}

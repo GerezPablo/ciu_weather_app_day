@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="weather" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
-    <div>
-        <img src="img/cities-skylines.png" alt="">
-        <button onclick="writeWeather()"> Apretame si tenes huevos</button>
-        
-        <div>
-            <div id="humidity"></div>
-            <div id="pressure"></div>
-            <div id="wind_speed"></div>
-            <div id="sunset"></div>
-            <div id="sunrise"></div>
-            <div id="dt"></div>
-        </div>
-    </div>
 </head>
 <body>
+    <div>
+        <img src="img/cities-skylines.png" class="sky">
+    </div>
     
-</body>
+    <div>
+        <img src="img/panel.png" id="panel">
+        <div>
+            <div id="dayTime" class="font"></div>
+            <div id="city" class="font"></div>
+            <img src="img/location_rectangle.png" id="location_rectangle">
+            <img src="img/location_icon.png" id="location_icon">
+        </div>
+        <div id="fecha"></div>
+
+        <div id="humidity" class="fontDateTime">
+            <img src="img/humidity_icon.png"> 
+        </div>
+        <div id="pressure" class="purple">
+            <img src="img/pressure_icon.png"> 
+        </div>
+
+    </div>
+
+</body onload="writeCurrentWeather()">
 <script src="js/app.js"></script>   
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">  
 </html>
+
+<!-- 23 || 24 -->
