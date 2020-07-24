@@ -155,7 +155,7 @@
 
 #sunsetHour {
     position: absolute;
-    left: 3%;
+    left: 1%;
     top: 88%;
 }
 #sunset {
@@ -172,7 +172,7 @@
 }
 #sunriseHour {
     position: absolute;
-    left: 48%;
+    left: 46%;
     top: 88%;
 }
 #sunrise {

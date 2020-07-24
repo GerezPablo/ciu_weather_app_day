@@ -53,11 +53,11 @@ function writeCurrentWeather() {
         ///  Second Row  ///
         //Sunset
         const currentSunset = new Date(day.sunset * 1000);
-        document.getElementById("sunsetHour").innerHTML = `${currentSunset.getHours()}`;
+        document.getElementById("sunsetHour").innerHTML = `${currentSunset.getHours()}:${currentSunset.getMinutes()}`;
         
         //Sunrise
         const currentSunrise = new Date(day.sunrise * 1000);
-        document.getElementById("sunriseHour").innerHTML = `${currentSunrise.getHours()}`;
+        document.getElementById("sunriseHour").innerHTML = `${currentSunrise.getHours()}:${currentSunrise.getMinutes()}`;
         
         //Daytime
         const currentDaytime= new Date(day.dt * 1000);
