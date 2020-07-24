@@ -1,3 +1,4 @@
+/*/////////// FONDO //////////////*/
 #sky { 
     max-width: 100%;
     margin: 0;
@@ -10,6 +11,8 @@
     top: 30%;
 }
 
+
+/*/////////// CURRENT STATUS //////////////*/
 #location_rectangle {
     position: absolute;
     width: 25vh;
@@ -77,7 +80,7 @@
 
 #celsius {
     position: absolute;
-    left: 55%;
+    left: 59%;
     top: 48%;
 
     font-family: 'Barlow', sans-serif;
@@ -103,119 +106,250 @@
     color: grey;
 }
 
-/*///////////////////////////////////////////////*/
-#humidityIcon {
-    position: absolute;
-    left: 3%;
-    top:63%;
+/*/////////// FIRST ROW //////////////*/
+    /*/////////// HUMIDITY //////////////*/
+    #humidityIcon {
+        position: absolute;
+        left: 3%;
+        top:63%;
+    }
+    #humdityPercentage {
+        position: absolute;
+        left: 2%;
+        top: 70%;
+    }
+    #humidity {
+        position: absolute;
+        left: 2%;
+        top:73%;
+    }
+    /*/////////// PRESSURE //////////////*/
+    #pressureIcon {
+        position: absolute;
+        left: 47%;
+        top:63%;
+    }
+    #pressureMbar{
+        position: absolute;
+        left: 35%;
+        top: 70%;
+    }
+    #pressure {
+        position: absolute;
+        right: 42%;
+        top:73%;
+    }
+
+    /*/////////// WIND //////////////*/
+    #windIcon {
+        position: absolute;
+        right: 13%;
+        top:63%;
+    }
+    #windSpeed{
+        position: absolute;
+        right: 2%;
+        top: 70%;
+    }
+    #wind {
+        position: absolute;
+        right: 6%;
+        top:73%;
+    }
+
+/*/////////// SECOND ROW //////////////*/
+    /*/////////// SUNSET //////////////*/
+    #sunsetIcon {
+        position: absolute;
+        left: 3%;
+        top:82%;
+    }
+    #sunsetHour {
+        position: absolute;
+        left: 1%;
+        top: 88%;
+    }
+    #sunset {
+        position: absolute;
+        left: 2%;
+        top:91%;
+    }
+
+    /*/////////// SUNRISE //////////////*/
+    #sunriseIcon {
+        position: absolute;
+        left: 47%;
+        top:82%;
+    }
+    #sunriseHour {
+        position: absolute;
+        left: 46%;
+        top: 88%;
+    }
+    #sunrise {
+        position: absolute;
+        left: 46%;
+        top:91%;
+    }
+
+    /*/////////// DAYTIME //////////////*/
+    #dayTimeIcon {
+        position: absolute;
+        right: 14%;
+        top:82%;
+    }
+    #dayTimeHour {
+        position: absolute;
+        right: 7%;
+        top: 88%;
+    }
+    #dayTime {
+        position: absolute;
+        right: 5%;
+        top:91%;
+    }
+
+/*/////////// WEEK INFO //////////////*/
+.sqr {
+    width: 17vh;
 }
-#humdityPercentage {
-    position: absolute;
-    left: 2%;
-    top: 70%;
+.iconsqr {
+    width: 5vh;
+    min-width: 100%
 }
-#humidity {
+.sqrFont {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-size: 2vh;
+    color: grey;
+    line-height: 1;
+}
+/*/////////// SQUARES //////////////*/
+#weeklyReport {
     position: absolute;
-    left: 2%;
-    top:73%;
+    top: 40%;
+    left: 0;
+}
+/*/////////// FIRST //////////////*/
+#sqr1 {
+    position: absolute;
+    left: 1vh;
+    top: 55vh;
+}
+#weatherIcon1 {
+    position: absolute;
+    left: 4vh;
+    top: 57.5vh;
+}
+#max1 {
+    position: absolute;
+    left: 9vh;
+    top: 59vh;
+}
+#min1 {
+    position: absolute;
+    left: 9.5vh;
+    top: 62vh;
+}
+#currentHour1 {
+    position: absolute;
+    left: 7vh;
+    top: 65.5vh;
+    width: 7vh;
 }
 
-/*///////////////////////////////////////////////*/
-#pressureIcon {
+/*/////////// SECOND //////////////*/
+#sqr2 {
     position: absolute;
-    left: 47%;
-    top:63%;
+    left: 14vh;
+    top: 55vh;
 }
-#pressureMbar{
+#weatherIcon2 {
     position: absolute;
-    left: 35%;
-    top: 70%;
+    left: 16.5vh;
+    top: 57.5vh;
 }
-#pressure {
+#max2 {
     position: absolute;
-    right: 42%;
-    top:73%;
+    left: 22vh;
+    top: 59vh;
 }
-
-/*///////////////////////////////////////////////*/
-#windIcon {
+#min2 {
     position: absolute;
-    right: 13%;
-    top:63%;
+    left: 22.5vh;
+    top: 62vh;
 }
-#windSpeed{
+#currentHour2 {
     position: absolute;
-    right: 2%;
-    top: 70%;
-}
-#wind {
-    position: absolute;
-    right: 6%;
-    top:73%;
+    left: 20vh;
+    top: 65.5vh;
+    width: 8vh;
 }
 
-/*///////////////////////////////////////////////*/
-#sunsetIcon {
+/*/////////// THIRD //////////////*/
+#sqr3 {
     position: absolute;
-    left: 3%;
-    top:82%;
+    left: 27vh;
+    top: 55vh;
+}
+#weatherIcon3 {
+    position: absolute;
+    top: 57.5vh;
+    left: 29vh;
+}
+#max3 {
+    position: absolute;
+    left: 35vh;
+    top: 59vh;
+}
+#min3 {
+    position: absolute;
+    left: 35.5vh;
+    top: 62vh;
+}
+#currentHour3 {
+    position: absolute;
+    left: 32vh;
+    top: 65vh;
+    width: 9vh;
 }
 
-#sunsetHour {
+/*/////////// FOURTH //////////////*/
+#sqr4 {
     position: absolute;
-    left: 1%;
-    top: 88%;
+    left: 40vh;
+    top: 55vh;
 }
-#sunset {
+#weatherIcon4 {
     position: absolute;
-    left: 2%;
-    top:91%;
+    top: 57.5vh;
+    left: 43vh;
 }
-
-/*///////////////////////////////////////////////*/
-#sunriseIcon {
+#max4 {
     position: absolute;
-    left: 47%;
-    top:82%;
+    left: 48vh;
+    top: 59vh;
 }
-#sunriseHour {
+#min4 {
     position: absolute;
-    left: 46%;
-    top: 88%;
+    left: 48.5vh;
+    top: 62vh;
 }
-#sunrise {
+#currentHour4 {
     position: absolute;
-    left: 46%;
-    top:91%;
-}
-
-/*///////////////////////////////////////////////*/
-#dayTimeIcon {
-    position: absolute;
-    right: 14%;
-    top:82%;
-}
-#dayTimeHour {
-    position: absolute;
-    right: 7%;
-    top: 88%;
-}
-#dayTime {
-    position: absolute;
-    right: 5%;
-    top:91%;
+    left: 46vh;
+    top: 65.5vh;
+    width: 7vh;
 }
 
 
-
+/*/////////// FONTS //////////////*/
 .icon {
     position: absolute;
     width: 5vh;
     min-width: 100%;
 }
 
-
-/*Fuentes*/
 .font {
     font-family: 'Barlow', sans-serif;
     font-style: normal;
