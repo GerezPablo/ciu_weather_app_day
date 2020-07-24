@@ -21,7 +21,7 @@ function getCurrentWeather() {    //Re distribuida la forma de llenar datos para
 
         //weather icon  
         const icon = weatherInfo.current.weather[0].icon;
-        const url = ` http://openweathermap.org/img/wn/${icon}@4x.png`;
+        const url = ` https://openweathermap.org/img/wn/${icon}@4x.png`;
         document.getElementById("weatherIcon").innerHTML = `<img src=${url}>`;
 
         //Current Temperature
