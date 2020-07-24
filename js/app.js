@@ -28,13 +28,28 @@ function writeCurrentWeather() {
     .then( day => {
         //DayTime
         const dayTime = new Date(day.dt * 1000);
-        document.getElementById("dayTime").innerHTML =  dayTime.toString().substr(0,21);;
+        document.getElementById("dayTime").innerHTML =  dayTime.toString().substr(0,21); //Se acorta antes por estetica.
         
         //weather icon  
         const icon = day.weather[0].icon;
         const url = ` http://openweathermap.org/img/wn/${icon}@4x.png`;
         document.getElementById("weatherIcon").innerHTML = `<img src=${url}>`;
         
+        //Min & max
+        document.getElementById("max").innerHTML = `${parseInt(day.temp.max)}°C↑`;
+        document.getElementById("min").innerHTML = `${parseInt(day.temp.min)}°C↓`;
+
+
+        ///  First Roww  //
+        //Humidity
+        document.getElementById("humdityPercentage").innerHTML = `${day.humidity}%`;
+        //Pressure
+        document.getElementById("pressureMbar").innerHTML = `${day.pressure}mBar`;
+        //Wind Speed 
+        document.getElementById("windSpeed").innerHTML = `${parseInt(day.wind_speed)}km/h`;
+        
+        
+        ///  Second Row  ///
         //Sunrirse
         const currentSunrise = new Date(day.sunrise * 1000);
         console.log( `${currentSunrise.getHours()}:${currentSunrise.getMinutes()}` );
@@ -43,9 +58,7 @@ function writeCurrentWeather() {
         const currentSunset = new Date(day.sunset * 1000);
         console.log( `${currentSunset.getHours()}:${currentSunset.getMinutes()}` );
         
-        //Min & max
-        document.getElementById("max").innerHTML = `${parseInt(day.temp.max)}°C↑`;
-        document.getElementById("min").innerHTML = `${parseInt(day.temp.min)}°C↓`;
+        
     })
 }
 /*

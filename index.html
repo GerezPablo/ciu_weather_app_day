@@ -21,23 +21,36 @@
             <img src="img/location_rectangle.png" id="location_rectangle">
             <img src="img/location_icon.png" id="location_icon">
         </div>
-
-        <!--  First Row  -->
         <div>
             <div id="weatherIcon"> </div>
             <div id="temperatura"></div> <div id="celsius"> °C</div>
             <div id="max" class="font"></div> 
             <div id="min" class="font"></div>
         </div>
-        <!--  Second Row  -->
+
+        <!--  First Row  -->
         <div>
-            <div id="humidity" class="fontDateTime">Humidity
-            <img src="img/humidity_icon.png"> 
+            <div> 
+                <!--  Humidity  -->
+                <div id="humidityIcon"><img src="img/humidity_icon.png" class="icon"> </div>
+                <div id="humdityPercentage" class="biggie "></div>
+                <div id="humidity" class="subtittle"> Humidity</div>
             </div>
-            <div id="pressure" class="purple">
-                <img src="img/pressure_icon.png"> 
+            <div> 
+                <!--  Humidity  -->
+                <div id="pressureIcon"><img src="img/pressure_icon.png" class="icon"> </div>
+                <div id="pressureMbar" class="biggie "></div>
+                <div id="pressure" class="subtittle"> Pressure</div>
+            </div>      
+            <div> 
+                <!--  Wind  -->
+                <div id="windIcon"><img src="img/wind_icon.png" class="icon"> </div>
+                <div id="windSpeed" class="biggie "></div>
+                <div id="wind" class="subtittle"> Wind</div>
             </div>
         </div>
+
+        <!--  Second Row  -->
     </div>
 
 </body onload="writeCurrentWeather()">
