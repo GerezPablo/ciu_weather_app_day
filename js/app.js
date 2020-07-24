@@ -33,6 +33,8 @@ function getCurrentWeather() {    //Re distribuida la forma de llenar datos para
     })
     .catch(err => { err = new Error(), console.log(err) })
 }
+
+
 function writeCurrentWeather() {
     getCurrentWeather()
     .then( day => {
@@ -64,11 +66,5 @@ function writeCurrentWeather() {
         document.getElementById("dayTimeHour").innerHTML = `${currentDaytime.getHours()}`;
     })
 }
-/*
-{"lat":-34.57,"lon":-58.62,"timezone":"America/Argentina/Buenos_Aires","timezone_offset":-10800,
-"current":{"dt":1595466585,"sunrise":1595415296,"sunset":1595451997,"temp":287.65,"feels_like":286.56,"pressure":1011,
-"humidity":87,"dew_point":285.51,"uvi":2.84,"clouds":90,"visibility":5000,"wind_speed":2.6,"wind_deg":230,
-"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}]}}
-*/
 
 writeCurrentWeather() 
