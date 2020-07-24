@@ -1,4 +1,4 @@
-.sky { 
+#sky { 
     max-width: 100%;
     margin: 0;
 }
@@ -53,12 +53,12 @@
 
 #temperatura {
     position: absolute;
-    left: 35%;
+    left: 40%;
     top: 50%;
 
     font-family: 'Barlow', sans-serif;
     font-style: normal;
-    text-align: center;
+    
     font-size: 10vh;
     line-height: 77px;
     letter-spacing: -0.05em;
