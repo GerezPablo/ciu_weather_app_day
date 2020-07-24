@@ -18,8 +18,7 @@ function getCurrentWeather() {
         document.getElementById("currentHour").innerHTML =  today.toString().substr(0,21);
     
         //Get City
-        const tz = weatherInfo.timezone.split("/");
-        document.getElementById("city").innerHTML = tz[tz.length-1]; 
+        document.getElementById("city").innerHTML = "Villa Tesei"; 
 
         //weather icon  
         const icon = weatherInfo.current.weather[0].icon;
