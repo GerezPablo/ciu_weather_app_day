@@ -11,14 +11,24 @@ const request = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=
 function getCurrentWeather() {    //Re distribuida la forma de llenar datos para hacer un solo llamado 
     return fetch(request).then(response => response.json()) //Le pega a la API.
     .then(weatherInfo => {
+        //Current Hour
+        document.getElementById("currentHour").innerHTML =  new Date().toString().substr(0,21); //Se acorta antes por estetica.
+
         //Get City
         const tz = weatherInfo.timezone.split("/");
         document.getElementById("city").innerHTML = tz[tz.length-1];
 
-        //Current Temperatute
+
+        //weather icon  
+        const icon = weatherInfo.current.weather[0].icon;
+        const url = ` http://openweathermap.org/img/wn/${icon}@4x.png`;
+        document.getElementById("weatherIcon").innerHTML = `<img src=${url}>`;
+
+        //Current Temperature
         const ct = parseInt(weatherInfo.current.temp);        
         document.getElementById("temperatura").innerHTML = ct;
 
+    
         return weatherInfo.daily[0] //Devuelve dia actual.
     })
     .catch(err => { err = new Error(), console.log(err) })
@@ -26,15 +36,6 @@ function getCurrentWeather() {    //Re distribuida la forma de llenar datos para
 function writeCurrentWeather() {
     getCurrentWeather()
     .then( day => {
-        //DayTime
-        const dayTime = new Date(day.dt * 1000);
-        document.getElementById("dayTime").innerHTML =  dayTime.toString().substr(0,21); //Se acorta antes por estetica.
-        
-        //weather icon  
-        const icon = day.weather[0].icon;
-        const url = ` http://openweathermap.org/img/wn/${icon}@4x.png`;
-        document.getElementById("weatherIcon").innerHTML = `<img src=${url}>`;
-        
         //Min & max
         document.getElementById("max").innerHTML = `${parseInt(day.temp.max)}°C↑`;
         document.getElementById("min").innerHTML = `${parseInt(day.temp.min)}°C↓`;
@@ -50,15 +51,17 @@ function writeCurrentWeather() {
         
         
         ///  Second Row  ///
-        //Sunrirse
-        const currentSunrise = new Date(day.sunrise * 1000);
-        console.log( `${currentSunrise.getHours()}:${currentSunrise.getMinutes()}` );
-
         //Sunset
         const currentSunset = new Date(day.sunset * 1000);
-        console.log( `${currentSunset.getHours()}:${currentSunset.getMinutes()}` );
+        document.getElementById("sunsetHour").innerHTML = `${currentSunset.getHours()}`;
         
+        //Sunrise
+        const currentSunrise = new Date(day.sunset * 1000);
+        document.getElementById("sunriseHour").innerHTML = `${currentSunrise.getHours()}`;
         
+        //Daytime
+        const currentDaytime= new Date(day.dt * 1000);
+        document.getElementById("dayTimeHour").innerHTML = `${currentDaytime.getHours()}`;
     })
 }
 /*

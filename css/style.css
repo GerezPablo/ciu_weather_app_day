@@ -18,7 +18,7 @@
     top: 38%;
 }
 
-#dayTime {
+#currentHour {
     position: absolute;
     width: 20vh;
     height: 30vh;
@@ -58,6 +58,7 @@
 
     font-family: 'Barlow', sans-serif;
     font-style: normal;
+    text-align: center;
     font-size: 10vh;
     line-height: 77px;
     letter-spacing: -0.05em;
@@ -93,62 +94,112 @@
     top: 52%;
     color: grey;
 }
+
 /*///////////////////////////////////////////////*/
 #humidityIcon {
     position: absolute;
     left: 3%;
     top:63%;
 }
-
 #humdityPercentage {
     position: absolute;
     left: 2%;
     top: 70%;
 }
-
 #humidity {
     position: absolute;
     left: 2%;
     top:73%;
 }
+
 /*///////////////////////////////////////////////*/
 #pressureIcon {
     position: absolute;
     left: 47%;
     top:63%;
 }
-
 #pressureMbar{
     position: absolute;
     left: 35%;
     top: 70%;
 }
-
 #pressure {
     position: absolute;
     right: 42%;
     top:73%;
 }
-/*///////////////////////////////////////////////*/
 
+/*///////////////////////////////////////////////*/
 #windIcon {
     position: absolute;
     right: 13%;
     top:63%;
 }
-
 #windSpeed{
     position: absolute;
     right: 2%;
     top: 70%;
 }
-
 #wind {
     position: absolute;
     right: 6%;
     top:73%;
 }
+
 /*///////////////////////////////////////////////*/
+#sunsetIcon {
+    position: absolute;
+    left: 3%;
+    top:82%;
+}
+
+#sunsetHour {
+    position: absolute;
+    left: 3%;
+    top: 88%;
+}
+#sunset {
+    position: absolute;
+    left: 2%;
+    top:91%;
+}
+
+/*///////////////////////////////////////////////*/
+#sunriseIcon {
+    position: absolute;
+    left: 47%;
+    top:82%;
+}
+#sunriseHour {
+    position: absolute;
+    left: 48%;
+    top: 88%;
+}
+#sunrise {
+    position: absolute;
+    left: 46%;
+    top:91%;
+}
+
+/*///////////////////////////////////////////////*/
+#dayTimeIcon {
+    position: absolute;
+    right: 14%;
+    top:82%;
+}
+#dayTimeHour {
+    position: absolute;
+    right: 7%;
+    top: 88%;
+}
+#dayTime {
+    position: absolute;
+    right: 5%;
+    top:91%;
+}
+
+
+
 .icon {
     position: absolute;
     width: 5vh;

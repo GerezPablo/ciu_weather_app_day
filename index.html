@@ -16,7 +16,7 @@
         
         <!--  Location & dateTime info  -->
         <div>
-            <div id="dayTime" class="font"></div>
+            <div id="currentHour" class="font"></div>
             <div id="city" class="font"></div>
             <img src="img/location_rectangle.png" id="location_rectangle">
             <img src="img/location_icon.png" id="location_icon">
@@ -37,7 +37,7 @@
                 <div id="humidity" class="subtittle"> Humidity</div>
             </div>
             <div> 
-                <!--  Humidity  -->
+                <!--  Pressure  -->
                 <div id="pressureIcon"><img src="img/pressure_icon.png" class="icon"> </div>
                 <div id="pressureMbar" class="biggie "></div>
                 <div id="pressure" class="subtittle"> Pressure</div>
@@ -49,8 +49,27 @@
                 <div id="wind" class="subtittle"> Wind</div>
             </div>
         </div>
-
         <!--  Second Row  -->
+        <div>
+            <div> 
+                <!--  Sunset  -->
+                <div id="sunsetIcon"> <img src="img/sunset_icon.png" class="icon"> </div>
+                <div id="sunsetHour" class="biggie "></div>
+                <div id="sunset" class="subtittle"> Sunset</div>
+            </div>
+            <div> 
+                <!--  Sunrise  -->
+                <div id="sunriseIcon"><img src="img/sunrise_icon.png" class="icon"> </div>
+                <div id="sunriseHour" class="biggie "></div>
+                <div id="sunrise" class="subtittle"> Sunrise</div>
+            </div>      
+            <div> 
+                <!--  dayTime  -->
+                <div id="dayTimeIcon"><img src="img/dayTime_icon.png" class="icon"> </div>
+                <div id="dayTimeHour" class="biggie "></div>
+                <div id="dayTime" class="subtittle"> Daytine</div>
+            </div>
+        </div>
     </div>
 
 </body onload="writeCurrentWeather()">
