@@ -56,7 +56,7 @@ function writeCurrentWeather() {
         document.getElementById("sunsetHour").innerHTML = `${currentSunset.getHours()}`;
         
         //Sunrise
-        const currentSunrise = new Date(day.sunset * 1000);
+        const currentSunrise = new Date(day.sunrise * 1000);
         document.getElementById("sunriseHour").innerHTML = `${currentSunrise.getHours()}`;
         
         //Daytime
