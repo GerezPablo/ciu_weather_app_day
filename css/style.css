@@ -51,6 +51,14 @@
     left: 0;
 }
 
+#weatherTittle {
+    position: absolute;
+    left: 3%;
+    top: 56%;
+    font-size: 3vh;
+    color: #000000;
+}
+
 #temperatura {
     position: absolute;
     left: 40%;

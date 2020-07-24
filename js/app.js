@@ -23,6 +23,7 @@ function getCurrentWeather() {    //Re distribuida la forma de llenar datos para
         const icon = weatherInfo.current.weather[0].icon;
         const url = ` https://openweathermap.org/img/wn/${icon}@4x.png`;
         document.getElementById("weatherIcon").innerHTML = `<img src=${url}>`;
+        document.getElementById("weatherTittle").innerHTML = weatherInfo.current.weather[0].main;
 
         //Current Temperature
         const ct = parseInt(weatherInfo.current.temp);        
