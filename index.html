@@ -6,22 +6,24 @@
     <link rel="icon" href="img/logo.ico">
     <title>Weather News</title>
 </head>
+
+
 <body>
-    <div>
-        <img src="img/cities-skylines.png" id="sky">
-    </div>
+    <!-- BACKGROUND -->
+    <div> <img src="img/cities-skylines.png" id="sky"> </div>
     
-    <div> 
-        <!-- PANEL-->
-        <img src="img/panel.png" id="panel">
+    <!-- PANEL-->
+    <div> <img src="img/panel.png" id="panel">
         
-        <!--  Location & dateTime info  -->
+        <!--  Location & Time  -->
         <div>
             <div id="currentHour" class="font"></div>
             <div id="city" class="font"></div>
             <img src="img/location_rectangle.png" id="location_rectangle">
             <img src="img/location_icon.png" id="location_icon">
         </div>
+
+        <!--  weather info  -->
         <div>
             <div id="weatherIcon"> </div>
             <div id="weatherTittle" class="subtittle"></div>
@@ -32,83 +34,81 @@
 
         <!--  First Row  -->
         <div>
-            <div> 
-                <!--  Humidity  -->
+            <div> <!--  Humidity  -->
                 <div id="humidityIcon"><img src="img/humidity_icon.png" class="icon"> </div>
                 <div id="humdityPercentage" class="biggie "></div>
                 <div id="humidity" class="subtittle"> Humidity</div>
             </div>
-            <div> 
-                <!--  Pressure  -->
+
+            <div> <!--  Pressure  -->
                 <div id="pressureIcon"><img src="img/pressure_icon.png" class="icon"> </div>
                 <div id="pressureMbar" class="biggie "></div>
                 <div id="pressure" class="subtittle"> Pressure</div>
             </div>      
-            <div> 
-                <!--  Wind  -->
+
+            <div> <!--  Wind  -->
                 <div id="windIcon"><img src="img/wind_icon.png" class="icon"> </div>
                 <div id="windSpeed" class="biggie "></div>
                 <div id="wind" class="subtittle"> Wind</div>
             </div>
         </div>
+
         <!--  Second Row  -->
         <div>
-            <div> 
-                <!--  Sunset  -->
+            <div> <!--  Sunset  -->
                 <div id="sunsetIcon"> <img src="img/sunset_icon.png" class="icon"> </div>
                 <div id="sunsetHour" class="biggie "></div>
                 <div id="sunset" class="subtittle"> Sunset</div>
             </div>
-            <div> 
-                <!--  Sunrise  -->
+
+            <div> <!--  Sunrise  -->
                 <div id="sunriseIcon"><img src="img/sunrise_icon.png" class="icon"> </div>
                 <div id="sunriseHour" class="biggie "></div>
                 <div id="sunrise" class="subtittle"> Sunrise</div>
             </div>      
-            <div> 
-                <!--  dayTime  -->
+
+            <div> <!--  dayTime  -->
                 <div id="dayTimeIcon"><img src="img/dayTime_icon.png" class="icon"> </div>
                 <div id="dayTimeHour" class="biggie "></div>
                 <div id="dayTime" class="subtittle"> Daytime</div>
             </div>
         </div>
-      
-        <div id = weeklyReport>
-            <!--  Weekly Report  -->
-            <div id="day1">
-                <img src="img/square1.png" id= sqr1 class="sqr">
-                <div id="weatherIcon1"> </div>
-                <div id="max1" class="sqrFont"></div> 
-                <div id="min1" class="sqrFont"></div>
-                <div id="currentHour1" class="sqrFont"></div>
-            </div>
-            
-            <div id="day2"> 
-                <img src="img/square1.png" id= sqr2 class="sqr">
-                <div id="weatherIcon2" class="iconSqr"> </div>
-                <div id="max2" class="sqrFont"></div> 
-                <div id="min2" class="sqrFont"></div>
-                <div id="currentHour2" class="sqrFont"></div>
-            </div>
-            
-            <div id="day3"> 
-                <img src="img/square1.png" id= sqr3 class="sqr">            
-                <div id="weatherIcon3" class="iconSqr"> </div>
-                <div id="max3" class="sqrFont"></div> 
-                <div id="min3" class="sqrFont"></div>
-                <div id="currentHour3" class="sqrFont"></div>
-            </div>
-            
-            <div id="day4"> 
-                <img src="img/square1.png" id= sqr4 class="sqr">
-                <div id="weatherIcon4" class="iconSqr"> </div>
-                <div id="max4" class="sqrFont"></div> 
-                <div id="min4" class="sqrFont"></div>
-                <div id="currentHour4" class="sqrFont"></div>
-            </div>
-        </div>
     </div>
 
+    <div id = weeklyReport>
+        <!--  Weekly Report  -->
+        <div id="day1">
+            <img src="img/square.png" id= sqr1 class="sqr">
+            <div id="weatherIcon1"> </div>
+            <div id="max1" class="sqrFont"></div> 
+            <div id="min1" class="sqrFont"></div>
+            <div id="currentHour1" class="sqrFont"></div>
+        </div>
+        
+        <div id="day2"> 
+            <img src="img/square.png" id= sqr2 class="sqr">
+            <div id="weatherIcon2" class="iconSqr"> </div>
+            <div id="max2" class="sqrFont"></div> 
+            <div id="min2" class="sqrFont"></div>
+            <div id="currentHour2" class="sqrFont"></div>
+        </div>
+        
+        <div id="day3"> 
+            <img src="img/square.png" id= sqr3 class="sqr">            
+            <div id="weatherIcon3" class="iconSqr"> </div>
+            <div id="max3" class="sqrFont"></div> 
+            <div id="min3" class="sqrFont"></div>
+            <div id="currentHour3" class="sqrFont"></div>
+        </div>
+        
+        <div id="day4"> 
+            <img src="img/square.png" id= sqr4 class="sqr">
+            <div id="weatherIcon4" class="iconSqr"> </div>
+            <div id="max4" class="sqrFont"></div> 
+            <div id="min4" class="sqrFont"></div>
+            <div id="currentHour4" class="sqrFont"></div>
+        </div>
+    </div>
 </body onload="writeCurrentWeather()">
 <script src="js/app.js"></script>   
 <link rel="stylesheet" href="css/style.css">  

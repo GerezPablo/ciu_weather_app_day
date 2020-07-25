@@ -1,7 +1,6 @@
 /*/////////// FONDO //////////////*/
 #sky { 
-    max-width: 100%;
-    margin: 0;
+    width: 100%;
 }
 
 #panel {
@@ -10,7 +9,6 @@
     min-width: 100%;
     top: 30%;
 }
-
 
 /*/////////// CURRENT STATUS //////////////*/
 #location_rectangle {
@@ -52,6 +50,7 @@
 #weatherIcon  {
     position: absolute;
     left: 0;
+    top: 47vh;
 }
 
 #weatherTittle {
@@ -295,7 +294,7 @@
 #weatherIcon3 {
     position: absolute;
     top: 57.5vh;
-    left: 29vh;
+    left: 30vh;
 }
 #max3 {
     position: absolute;
@@ -310,7 +309,7 @@
 #currentHour3 {
     position: absolute;
     left: 32vh;
-    top: 65vh;
+    top: 65.5vh;
     width: 9vh;
 }
 
@@ -339,7 +338,7 @@
     position: absolute;
     left: 46vh;
     top: 65.5vh;
-    width: 7vh;
+    width: 8vh;
 }
 
 
