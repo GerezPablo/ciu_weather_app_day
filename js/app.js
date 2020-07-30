@@ -13,6 +13,7 @@ function getCurrentWeather() {
     return fetch(request).then(response => response.json()) //Le pega a la API.
     .then(weatherInfo => {        
        var today = new Date() 
+       
     
        //Current Hour
         document.getElementById("currentHour").innerHTML =  today.toString().substr(0,21);
@@ -35,16 +36,17 @@ function getCurrentWeather() {
         document.getElementById("min").innerHTML = `${parseInt(weatherInfo.daily[0].temp.min)}°C↓`;
 
         //Next days 
-        const tomorrow = new Date(today);
         for ( i = 1; i <= 4; i ++) {
+            var tomorrow = new Date(today.getTime() + ((24 * 60 * 60 * 1000) * i ));
+
             const icon = weatherInfo.daily[i].weather[0].icon;
             const url = ` https://openweathermap.org/img/wn/${icon}@2x.png`;
             document.getElementById(`weatherIcon${i}`).innerHTML = `<img src=${url}>`;
             document.getElementById(`max${i}`).innerHTML = `${parseInt(weatherInfo.daily[i].temp.max)}°C↑`;
             document.getElementById(`min${i}`).innerHTML = `${parseInt(weatherInfo.daily[i].temp.min)}°C↓`;
-            tomorrow.setDate(today.getDate() + i);
-            document.getElementById(`currentHour${i}`).innerHTML = `
-                ${tomorrow.toString().substr(0,3)}, ${tomorrow.toString().substr(7,3)}`
+            
+            document.getElementById(`currentHour${i}`).innerHTML = 
+            `${tomorrow.toString().substr(0,3)}, ${tomorrow.toString().substr(7,3)}`;
         }
 
         return weatherInfo.daily[0] //Devuelve dia actual.
